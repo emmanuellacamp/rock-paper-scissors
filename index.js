@@ -21,9 +21,16 @@ window.onload = function() {
     document.getElementById('result').style.display = 'none';
 };
 
+
+/**
+ * Plays a single round of the game.
+ * 
+ * @param {string} playerChoice - The choice of the player.
+ */
 function playRound(playerChoice) {
+    // Get the computer's choice
     const computerChoice = getComputerChoice();
-    let result;
+    let result; // Result of the round
 
     // Update user choice icon
     userChoiceImg.src = `images/${playerChoice}.png`;
@@ -31,10 +38,14 @@ function playRound(playerChoice) {
     // Update computer choice icon
     computerChoiceImg.src = `images/${computerChoice}.png`;
 
+    // Display the result section and hide the weapon selection
     document.getElementById('result').style.display = 'block';
     document.getElementById('choose-weapon').style.display = 'none';
 
+    // Convert player choice to lowercase for comparison
     playerChoice = playerChoice.toLowerCase();
+
+    // Determine the result of the round
     if (playerChoice === computerChoice) {
         result = 'Tie';
     } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
@@ -47,14 +58,15 @@ function playRound(playerChoice) {
         computerScore++;
     }
     
-    // Update outcome text
+    // Update the outcome text
     outcomeDiv.textContent = `${result}`;
 
-    // Update score text
+    // Update the score text
     scoreDiv.textContent = `${computerScore} : ${playerScore}`;
 
-    // Check for game end
+    // Check if the game is over
     if (playerScore === 5 || computerScore === 5) {
+        // Determine the winner and update the outcome text
         if (playerScore > computerScore) {
             outcomeDiv.textContent += ` You won the game!`;
         } else {
