@@ -1,0 +1,141 @@
+/* style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFE4E1;
+    color: #B22222;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#main-container {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: calc(100vh + 50.5px);
+    padding-top: 2rem;
+    padding-bottom: calc(2rem + 50.5px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 2rem;
+}
+
+p {
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#choose-weapon {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game button {
+    margin: 0 10px;
+}
+
+#game button:disabled {
+    opacity: 0.5;
+}
+
+#score,
+#outcome,
+#restart {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: monospace;
+    background-color: #FFE4E1;
+    border-color: #B22222;
+    border-style: solid;
+    color: #B22222;
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #B22222;
+    color: #FFE4E1;
+}
+
+button:disabled {
+    opacity: 0.5;
+    background-color: #B22222;
+    cursor: not-allowed;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.icon-label {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+#icons img {
+    margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #game {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #game button {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+}
