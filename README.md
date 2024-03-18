@@ -22,7 +22,7 @@ This project implements the classic Rock Paper Scissors game where the player co
 
 ## Preview
 
-![Rock Paper Scissors](preview.png)
+![Rock Paper Scissors](./images/preview.png)
 
 ## How to Run
 
